@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Spinz</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="theme-color" content="#13ABE8"/>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Spinz">
+
+        
+
+        <!-- iOS -->
+        <meta name="apple-mobile-web-app-title" content="Spinz">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">           
+        <link rel="apple-touch-icon" href="/images/manifest/LogoV2.png"/>
+    
+        <!-- MS -->
+        <meta name="msapplication-TileImage" content="/images/LogoV2.png">
+        <meta name="msapplication-TileColor" content="#13ABE8">
+        <meta name="msapplication-tap-highlight" content="no">
+	
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+        <link rel="manifest" href="manifest.json"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/5d326d8a17.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript">
+            var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1; //&& ua.indexOf("mobile");
+            if (isAndroid) {
+                document.write('<meta name="viewport" content="width=device-width,height='+window.innerHeight+', initial-scale=1.0">');
+            }
+        </script> 
+    </head>
+    <body id="pageBody">
+        <div id="main">
+            <div id="inputArea">
+                <div id="inputForm">
+                    <form>                        
+                        <input type="text" name="personalID" id="personalID" autocomplete="off" placeholder="Personal ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Personal ID'"/><br>
+                        <input type="password" name="pin" id="pin" autocomplete="off" placeholder="PIN" onfocus="this.placeholder = ''" onblur="this.placeholder = 'PIN'"/>
+                        <button type="button" id="submit" class="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            if('serviceWorker' in navigator && 'PushManager' in window) {
+            navigator.serviceWorker
+                    .register('sw.js')
+                    .then(function() { console.log("Service Worker Registered"); });
+            }
+        </script>
+    </body>
+</html>

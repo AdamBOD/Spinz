@@ -1,0 +1,393 @@
+html {
+    height: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+#pageBody {    
+    height: 100%;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../images/Background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    box-sizing: border-box;
+}
+
+#inputArea {
+    width: 30%;
+    height: 100%;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    background-color: rgba(179, 179, 181, 0.5);
+    opacity: 1;
+}
+
+#inputForm {
+    width: 90%;
+    height: 100%;
+
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+input[type=text], input[type=password], select {
+    width:  100%;
+
+    font-size: 175%;
+    text-align: center;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+    padding: 1.2% 2%;
+    margin: 2% 0;
+    position: relative;
+}
+
+input:not(focus) +#contextMenu{
+    display: none;
+    visibility: hidden;
+}
+
+#journeyDate {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    text-align: center;
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#navBack {
+    font-size: 40px;
+
+    color: rgba(19, 128, 232, 0.8);
+
+    padding-bottom: 3px;
+}
+
+#navBack:hover {
+    color: rgba(19, 128, 232, 0.95);
+}
+
+#navBackDiv {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+
+    color: #ccc;
+}
+
+.returnMessage {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+
+    color: #ccc;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.journeyHeading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+
+    color: #fff;
+}
+
+.journeyArrow {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+
+    color: #fff;
+
+    padding: 0px;
+    margin: 0;
+}
+
+header {
+    height: 100%;
+
+    background-color: rgba(19, 128, 232, 0.5);    
+}
+ 
+#header {
+    width: 100%;
+    height: 15%;
+
+    padding-bottom: 35px;
+} 
+
+#logo {
+    height: 100%;
+
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    user-select: none;
+}
+
+.submit:hover {
+    background-color: rgba(19, 128, 232, 0.95);
+}
+
+.submit {
+    width: 100%;
+
+    font-size: 150%;
+    
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    padding: 12px 10px;
+    margin: 8px 0;
+
+    color: white;
+    background-color: rgba(19, 128, 232, 0.8);
+}
+
+.tableJoin {
+    width: 100%;
+    
+    font-size: 100%;
+
+    border: none;
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    padding: 2px 1px;
+    margin: 2px 0;
+
+    color: white;
+    background-color: rgba(19, 128, 232, 0.8);
+}
+
+.tableJoin:hover {
+    background-color: rgba(19, 128, 232, 0.95);
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+    border: 1px solid rgba(19, 128, 232, 0.5);
+    border-radius: 4px;
+
+    color: #fff;
+    background-color: rgba(179, 179, 181, 0.8);
+}
+
+tr {
+    padding: 0px;
+
+    border-bottom: 1px solid rgba(19, 128, 232, 0.5);
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+tr:first-child {
+    background-color: rgba(179, 179, 181, 0.9);
+}
+
+th {    
+    padding: 0px;
+}
+
+td {
+    padding: 0px;
+}
+
+.liftInfoTable {
+    text-align: center;
+}
+
+.journeyButton {
+    width: 100%;
+    
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+    font-size: 150%;
+
+    padding: 12px 10px;
+    margin: 8px 0;
+
+    color: white;
+    background-color: rgba(19, 128, 232, 0.8);
+}
+
+.journeyButton:hover {
+    background-color: rgba(19, 128, 232, 0.95);
+}
+
+@media (max-width: 600px) {
+    #main {
+        width: 80%;
+    }
+    #inputArea {
+        width: 100%;
+        /* height: 100%; */
+
+        border-radius: 4px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 1;
+
+        background-color: rgba(179, 179, 181, 0.5);
+    }
+
+    input[type=text], input[type=password], select {
+        width: 100%;
+
+        font-size: 155%;
+        text-align: center;
+
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+
+    #submit {
+        width: 100%;
+
+        font-size: 130%;
+
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+              
+        padding: 12px 10px;
+        margin: 8px 0;
+
+        color: white;
+        background-color: rgba(19, 128, 232, 0.8);
+    }
+
+    .journeyButton {
+        width: 100%;
+
+        border: none;
+        border-radius: 4px;
+
+        padding: 12px 10px;
+        margin: 8px 0;
+
+        cursor: pointer;
+        
+        color: white;
+        background-color: rgba(19, 128, 232, 0.8);
+    }
+}
+
+@media (max-height: 250px) {
+    #main {
+        width: 80%;
+    }
+    #inputArea {
+        width: 100%;
+        /* height: 100%; */
+
+        border-radius: 4px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 1;
+
+        background-color: rgba(179, 179, 181, 0.5);
+    }
+
+    input[type=text], input[type=password], select {
+        width: 100%;
+
+        font-size: 175%;
+        text-align: center;
+
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+
+    #submit {
+        width: 100%;
+
+        font-size: 150%;
+
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+              
+        padding: 12px 10px;
+        margin: 8px 0;
+
+        color: white;
+        background-color: rgba(19, 128, 232, 0.8);
+    }
+
+    .journeyButton {
+        width: 100%;
+
+        border: none;
+        border-radius: 4px;
+
+        padding: 12px 10px;
+        margin: 8px 0;
+
+        cursor: pointer;
+        
+        color: white;
+        background-color: rgba(19, 128, 232, 0.8);
+    }
+}

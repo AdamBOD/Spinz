@@ -1,0 +1,30 @@
+{
+  "short_name": "Spinz",
+  "name": "Spinz",
+  "icons": [
+    {
+      "src": "images/LogoV2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/LogoV2.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/LogoV2.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "images/LogoV2.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html?launcher=true",
+  "display" : "standalone",
+  "background_color" : "#13ABE8",
+  "theme_color" : "#3877E8"
+}

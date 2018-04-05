@@ -135,29 +135,15 @@
 
         else {
             clicked = true;
-            $.ajax({url: "scripts/login.php?username='" + $("#personalID").val() + "'&password='" + $("#pin").val() + "'", success: function(result){
-                console.log(result);
-            }});
-            // var url = 'scripts/login.php?username=' + $("#personalID").val() + '&password=' + $("#pin").val();
-            // request = new XMLHttpRequest();
-            // request.addEventListener('readystatechange', loginResponse, false);
-            // request.open('GET', url, true);
-            // request.send(null);
+            $.ajax({
+                url: "scripts/login.php?username=" + $("#personalID").val() + "&password=" + $("#pin").val(), 
+                dataType: "text",
+                success: function(result){
+                            console.log(result);
+                        }
+            });
             functionCall = "change";
             fadeOutLoop = setInterval (fadeOut, 5);
-        }
-    }
-
-    function loginResponse (event) {
-        if ( request.readyState === 4 ) {
-            if ( request.status === 200 ) {
-                if (request.responseText != "Error") {
-                    console.log (request.responseText);             
-                }
-                else {
-                    console.log ("Fuck Up");
-                }
-            }
         }
     }
 
